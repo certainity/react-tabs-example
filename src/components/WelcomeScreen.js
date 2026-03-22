@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import MicrosoftAdBanner from './MicrosoftAdBanner';
 import './WelcomeScreen.css';
 
 const WelcomeScreen = ({ onFileSelect, onFileDrop }) => {
@@ -56,6 +57,13 @@ const WelcomeScreen = ({ onFileSelect, onFileDrop }) => {
         Open PDF
       </button>
       <p className="welcome-hint">or drag and drop a PDF file here</p>
+      <div className="welcome-ad">
+        <MicrosoftAdBanner
+          slotId="welcome-banner"
+          elementId={process.env.REACT_APP_MS_ADS_WELCOME_ID}
+          className="leaderboard"
+        />
+      </div>
     </div>
   );
 };

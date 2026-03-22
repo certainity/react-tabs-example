@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
+import MicrosoftAdBanner from './MicrosoftAdBanner';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import './PdfViewer.css';
@@ -71,6 +72,13 @@ const PdfViewer = ({ file, onClose }) => {
           </div>
         </div>
       </header>
+
+      <div className="pdf-ad-strip">
+        <MicrosoftAdBanner
+          slotId="viewer-banner"
+          elementId={process.env.REACT_APP_MS_ADS_VIEWER_ID}
+        />
+      </div>
 
       <div className="pdf-content">
         {showThumbnails && (

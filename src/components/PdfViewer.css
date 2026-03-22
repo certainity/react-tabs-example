@@ -102,6 +102,17 @@
   text-align: center;
 }
 
+.pdf-ad-strip {
+  flex-shrink: 0;
+  padding: 0.25rem 1rem;
+  background: #161b22;
+  border-bottom: 1px solid #21262d;
+}
+
+.pdf-ad-strip .microsoft-ad-banner {
+  min-height: 50px;
+}
+
 .pdf-content {
   display: flex;
   flex: 1;

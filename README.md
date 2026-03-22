@@ -4,6 +4,7 @@ A lightweight PDF viewer for Windows, inspired by PhotoDesk — minimal, fast, a
 
 ## Features
 
+- **Microsoft Ads** — Configurable ad slots (Monetize Now / pubCenter) on welcome & viewer screens
 - **Clean, minimal UI** — Dark theme with distraction-free viewing
 - **Thumbnail sidebar** — Quick navigation between pages (toggle on/off)
 - **Zoom controls** — Zoom in, out, and fit to 100%
@@ -51,6 +52,28 @@ The installer will be in the `dist/` folder.
 - React 18
 - react-pdf (PDF.js)
 - Electron (for Windows packaging)
+
+## Microsoft Advertising
+
+The app includes Microsoft ad slots on the welcome screen and in the PDF viewer. To enable:
+
+1. **Sign up** at [Microsoft Monetize Now](https://monetizenow.microsoft.com) or [Microsoft pubCenter](https://about.ads.microsoft.com/en-us/h/a/publishers)
+2. **Create ad units** and copy the code snippets from your publisher dashboard
+3. **Add snippets** to `public/index.html` (before `</body>`)
+4. **Configure** element IDs in `.env`:
+
+```bash
+# Single ad unit (same ID for all slots)
+REACT_APP_MS_ADS_ELEMENT_ID=your-ad-unit-div-id
+
+# Or separate ad units per location
+REACT_APP_MS_ADS_WELCOME_ID=welcome-banner-id
+REACT_APP_MS_ADS_VIEWER_ID=viewer-banner-id
+```
+
+Copy `.env.example` to `.env` and fill in your values. Without configuration, placeholder "Microsoft Ad" slots are shown.
+
+> **Note:** Microsoft Monetize Now is scheduled to shut down Sept 2025; consider [Microsoft pubCenter](https://about.ads.microsoft.com/en-us/h/a/publishers) as an alternative.
 
 ## Usage
 

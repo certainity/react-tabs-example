@@ -49,3 +49,9 @@
   color: #6e7681;
   margin-top: 1.5rem;
 }
+
+.welcome-ad {
+  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 728px;
+}
